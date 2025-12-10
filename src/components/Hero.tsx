@@ -1,12 +1,11 @@
-import React from "react";
 import Banner from "./Banner";
 
 export default function Hero({backgroundImage, beforeTitle, title1, title2, subtitle}: {backgroundImage?: string, beforeTitle?:string, title1?: string,title2?: string, subtitle?: string}) {
   return (
     <div className="flex w-full justify-center mt-10">
-      <div className="grid grid-cols-3 grid-rows-4 gap-1 border-2 border-quaternary w-full min-w-[360px] min-h-[200px] max-w-[1280px] max-h-[720px] aspect-[16/9] mx-auto">
+      <div className="grid grid-cols-3 grid-rows-4 gap-1 border-2 border-quaternary w-full min-w-[360px] min-h-[200px] max-w-[1280px] max-h-[720px] aspect-[16/9] mx-auto rounded-xl">
         <div className="col-span-2 row-span-4">
-            <img className="object-cover w-full h-full" 
+            <img className="rounded-l-xl object-cover w-full h-full" 
             src={backgroundImage} alt="hero-img" 
             />
         </div>

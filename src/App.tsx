@@ -3,27 +3,26 @@ import { useState } from "react";
 import { Route, BrowserRouter, Routes } from "react-router";
 // Pages
 import Home from "./pages/Home";
-
+import Recipe from "./pages/Recipe";
+import Login from "./pages/Login";
 
 function App() {
   //todo: Routes
-  //todo: Home Page
-  //todo: chiamata API per immagine e titolo della ricetta in home page
+  //todo: 404 Page
+  //todo: Login Page
+  //todo: Recipe Page => Display recipe details component 
   //todo: API call w query parameter
-  //todo: components
+
+  //todo: Hero section border prettier
   
-
-
-
-
-
-  const [count, setCount] = useState(0);
 
   return (
     <>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/login/" element={<Login/>}/>
+      <Route path="/recipe/:id" element={<Recipe/>} />
     </Routes>
     </BrowserRouter>
     </>
