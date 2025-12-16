@@ -1,16 +1,29 @@
 import Banner from "./Banner";
 
-export default function Hero({backgroundImage, beforeTitle, title1, title2, subtitle}: {backgroundImage?: string, beforeTitle?:string, title1?: string,title2?: string, subtitle?: string}) {
+export default function Hero({
+  backgroundImage,
+}: {
+  backgroundImage?: string;
+}) {
   return (
-    <div className="flex w-full justify-center mt-10">
-      <div className="grid grid-cols-3 grid-rows-4 gap-1 border-2 border-quaternary w-full min-w-[360px] min-h-[200px] max-w-[1280px] max-h-[720px] aspect-[16/9] mx-auto rounded-xl">
-        <div className="col-span-2 row-span-4">
-            <img className="rounded-l-xl object-cover w-full h-full" 
-            src={backgroundImage} alt="hero-img" 
-            />
+    <div className="flex w-full justify-center px-4">
+      <div
+        className="flex flex-col md:flex-row border-x-2 border-quaternary w-full max-w-[1280px] rounded-xl p-4 md:p-8 gap-6">
+        <div className="flex flex-col justify-center text-center md:text-left md:mr-14 md:ml-14">
+          <h3
+            className=" text-quaternary text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight">
+            Here hundreds <br />
+            of Vegetarian Recipes <br />
+            for you
+          </h3>
         </div>
-        <div className="col-start-3 row-span-4 flex items-center justify-center ">
-            
+
+        <div className="flex justify-center md:justify-end items-center">
+          <img
+            className=" w-full max-w-md md:max-w-lg lg:max-w-xl h-48 sm:h-64 md:h-96 object-cover object-right rounded-xl"
+            src={backgroundImage}
+            alt="hero-img"
+          />
         </div>
       </div>
     </div>

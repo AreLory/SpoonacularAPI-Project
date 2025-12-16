@@ -2,15 +2,17 @@ import noImg from '../assets/images/noImg.png'
 
 import type { IIngredient } from "../types/IRecipe";
 
+import Loader from './Loader';
+
 export default function IngredientList({servings, ingredients}: {servings:number, ingredients: IIngredient[]}) {
 
   if (!ingredients) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
   
 
   return (
-    <div className="bg-tiertiary w-full md:w-[450px] flex justify-center">
+    <div className="bg-secondary h-fit mt-50 w-full md:w-[450px] flex justify-center p-4 rounded-xl">
       <div className=" flex flex-col w-[280px] md:w-[340px] justify-center">
         <h1 className="text-2xl md:text-4xl text-center">Ingredients</h1>
         <h3 className="text-center">for {servings} servings</h3>

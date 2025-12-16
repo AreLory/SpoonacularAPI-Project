@@ -7,13 +7,11 @@ import Recipe from "./pages/Recipe";
 import Login from "./pages/Login";
 
 function App() {
-  //todo: Routes
+  //todo: Finish Routes
   //todo: 404 Page
   //todo: Login Page
-  //todo: Recipe Page => Display recipe details component 
+  //todo: Sidebar w queries parameter 
   //todo: API call w query parameter
-
-  //todo: Hero section border prettier
   
 
   return (

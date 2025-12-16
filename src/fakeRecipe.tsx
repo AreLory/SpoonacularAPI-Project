@@ -1,3 +1,131 @@
+export const exampleList = {
+    "results": [
+        {
+            "id": 716406,
+            "title": "Asparagus and Pea Soup: Real Convenience Food",
+            "image": "https://img.spoonacular.com/recipes/716406-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 644387,
+            "title": "Garlicky Kale",
+            "image": "https://img.spoonacular.com/recipes/644387-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 782601,
+            "title": "Red Kidney Bean Jambalaya",
+            "image": "https://img.spoonacular.com/recipes/782601-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 716426,
+            "title": "Cauliflower, Brown Rice, and Vegetable Fried Rice",
+            "image": "https://img.spoonacular.com/recipes/716426-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 716004,
+            "title": "Quinoa and Chickpea Salad with Sun-Dried Tomatoes and Dried Cherries",
+            "image": "https://img.spoonacular.com/recipes/716004-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 716627,
+            "title": "Easy Homemade Rice and Beans",
+            "image": "https://img.spoonacular.com/recipes/716627-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 664147,
+            "title": "Tuscan White Bean Soup with Olive Oil and Rosemary",
+            "image": "https://img.spoonacular.com/recipes/664147-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 640941,
+            "title": "Crunchy Brussels Sprouts Side Dish",
+            "image": "https://img.spoonacular.com/recipes/640941-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 715769,
+            "title": "Broccolini Quinoa Pilaf",
+            "image": "https://img.spoonacular.com/recipes/715769-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 642605,
+            "title": "Farro With Mushrooms and Asparagus",
+            "image": "https://img.spoonacular.com/recipes/642605-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 646738,
+            "title": "Herbivoracious' White Bean and Kale Soup",
+            "image": "https://img.spoonacular.com/recipes/646738-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 663559,
+            "title": "Tomato and lentil soup",
+            "image": "https://img.spoonacular.com/recipes/663559-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 662670,
+            "title": "Swiss Chard Wraps",
+            "image": "https://img.spoonacular.com/recipes/662670-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 640062,
+            "title": "Corn Avocado Salsa",
+            "image": "https://img.spoonacular.com/recipes/640062-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 716432,
+            "title": "Finger Foods: Frittata Muffins",
+            "image": "https://img.spoonacular.com/recipes/716432-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 798400,
+            "title": "Spicy Black-Eyed Pea Curry with Swiss Chard and Roasted Eggplant",
+            "image": "https://img.spoonacular.com/recipes/798400-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 652417,
+            "title": "Moroccan chickpea and lentil stew",
+            "image": "https://img.spoonacular.com/recipes/652417-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 661925,
+            "title": "Strawberry-Mango Quinoa Salad",
+            "image": "https://img.spoonacular.com/recipes/661925-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 652423,
+            "title": "Moroccan Couscous and Chickpea Salad",
+            "image": "https://img.spoonacular.com/recipes/652423-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 715543,
+            "title": "Homemade Guacamole",
+            "image": "https://img.spoonacular.com/recipes/715543-312x231.jpg",
+            "imageType": "jpg"
+        }
+    ],
+    "offset": 0,
+    "number": 20,
+    "totalResults": 2177
+}
+
 export const example = {
   id: 74529,
   image: "https://img.spoonacular.com/recipes/74529-556x370.jpg",

@@ -11,7 +11,7 @@ export default function StepsList({name, steps}:IInstruction ) {
   
 
   return (
-    <div className="bg-quaternary w-full h-fit p-2 mt-2 rounded-lg">
+    <div className="bg-secondary w-full h-fit p-2 mt-2 rounded-lg text-mywhite">
       <h6 className="w-full text-center text-xl font-extrabold">DIRECTIONS</h6>
       {steps.map(step=><Step key={step.number}  number={step.number} step={step.step}/>)}
     </div>
