@@ -1,74 +1,80 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router'
+import { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import axios from "axios";
+import DOMPuirfy from "dompurify";
 
-
-//!Ricorda di togliere
-import { fakeRecipe, fakeIngredients } from '../fakeRecipe';
 // Components
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import IngredientList from '../components/IngredientsList';
+import Navbar from "../components/Navbar";
+import Banner from "../components/Banner";
+import IngredientList from "../components/IngredientsList";
+import StepsList from "../components/StepsList";
 
-interface Recipe {
-  id: number;
-  title: string;
-  image: string;
-  servings: number;
-  readyInMinutes: number;
-  extendedIngredients: any[];
-  summary: string;
-}
+// Interfaces
+import type { IRecipe } from "../types/IRecipe";
+
+// import { example } from "../fakeRecipe";
 
 export default function Recipe() {
-//   const params = useParams();
-//   const {id} = params;
+  const params = useParams();
+  const { id } = params;
 
-//   const [recipe, setRecipe] = useState<Recipe|null>(null);
-//   const apiKey = import.meta.env.VITE_API_KEY;
+  const [recipe, setRecipe] = useState<IRecipe | null>(null);
+  const apiKey = import.meta.env.VITE_API_KEY;
 
-//   useEffect(() => {
-//   async function fetchRecipeDetails(recipeId: string | undefined){
-//     const resp = await axios.get(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`);
-//     setRecipe(resp.data);
-//   } fetchRecipeDetails(id);
-// }, [id]);
+  useEffect(() => {
+    async function fetchRecipeDetails(recipeId: string | undefined) {
+      const resp = await axios.get(
+        `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`
+      );
+      setRecipe(resp.data);
+    }
+    fetchRecipeDetails(id);
+  }, [id]);
 
-//   if (!recipe) {
-//     return <div>Loading...</div>;
-//   }
-
-// const {
-//     title,
-//     image,
-//     servings,
-//     readyInMinutes,
-//     extendedIngredients,
-//     summary,
-//   } = recipe
-
-
+  if (!recipe) {
+    return <div>Loading...</div>;
+  }
 
   const {
-    id,
     title,
     image,
     servings,
     readyInMinutes,
+    preparationMinutes,
+    cookingMinutes,
+    analyzedInstructions,
+    extendedIngredients,
     summary,
-  } = fakeRecipe
-// {ingredient.name.toUpperCase()} | {ingredient.measures.metric.amount.toFixed()} {ingredient.measures.metric.unitShort}
-  
+  }:IRecipe = recipe;
+  console.log(recipe)
+  const stripHtml = (html: any) => html.replace(/<[^>]*>/g, "");
 
   return (
-    <div className='text-amber-50'>
+    <div className="text-amber-50">
       <Navbar />
-      <Hero backgroundImage={image}
-      title1={title}
-      subtitle={`Pronto in ${readyInMinutes} minuti`}/>
-      <div className='border-4 border-amber-600 flex justify-center md:justify-end'>
-      <IngredientList key={id}/>
+      {/* Sezione ricetta */}
+     
+      <div className=" flex justify-start md:justify-end flex-col md:flex-row h-fit mt-3 md:mt-0">
+        <div className="bg-tiertiary w-full h-fit flex flex-col justify-center p-2">
+           <Banner key={''} image={image} readyInMinutes={readyInMinutes} cookingMinutes={cookingMinutes} preparationMinutes={preparationMinutes} title={title}/>
+          <div className="flex flex-col bg-primary w-full h-fit p-2 mt-2 rounded-lg">
+            <h6 className="w-full text-center text-xl font-extrabold">
+              SUMMARY
+            </h6>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: DOMPuirfy.sanitize(stripHtml(summary)),
+              }}
+            />
+          </div>
+          
+          {/* Step by step */}
+            {analyzedInstructions.map(instuction=><StepsList key={instuction.name} name={instuction.name} steps={instuction.steps}/>)}  
+
+        </div>
+        {/* Ingredients List */}
+        <IngredientList key={id} servings={servings} ingredients={extendedIngredients}/>
       </div>
     </div>
-  )
+  );
 }

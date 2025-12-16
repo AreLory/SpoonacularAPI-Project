@@ -1,513 +1,515 @@
-export const fakeRecipe = {
-    "id": 716429,
-    "title": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
-    "image": "https://img.spoonacular.com/recipes/716429-556x370.jpg",
-    "imageType": "jpg",
-    "servings": 2,
-    "readyInMinutes": 45,
-    "cookingMinutes": 25,
-    "preparationMinutes": 20,
-    "license": "CC BY-SA 3.0",
-    "sourceName": "Full Belly Sisters",
-    "sourceUrl": "http://fullbellysisters.blogspot.com/2012/06/pasta-with-garlic-scallions-cauliflower.html",
-    "spoonacularSourceUrl": "https://spoonacular.com/pasta-with-garlic-scallions-cauliflower-breadcrumbs-716429",
-    "healthScore": 19.0,
-    "spoonacularScore": 83.0,
-    "pricePerServing": 163.15,
-    "analyzedInstructions": [],
-    "cheap": false,
-    "creditsText": "Full Belly Sisters",
-    "cuisines": [],
-    "dairyFree": false,
-    "diets": [],
-    "gaps": "no",
-    "glutenFree": false,
-    "instructions": "",
-    "ketogenic": false,
-    "lowFodmap": false,
-    "occasions": [],
-    "sustainable": false,
-    "vegan": false,
-    "vegetarian": false,
-    "veryHealthy": false,
-    "veryPopular": false,
-    "whole30": false,
-    "weightWatcherSmartPoints": 17,
-    "dishTypes": [
-        "lunch",
-        "main course",
-        "main dish",
-        "dinner"
-    ],
-    "extendedIngredients": [
-        {
-            "aisle": "Milk, Eggs, Other Dairy",
-            "amount": 1.0,
-            "consistency": "solid",
-            "id": 1001,
-            "image": "butter-sliced.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 1.0,
-                    "unitLong": "Tbsp",
-                    "unitShort": "Tbsp"
-                },
-                "us": {
-                    "amount": 1.0,
-                    "unitLong": "Tbsp",
-                    "unitShort": "Tbsp"
-                }
-            },
-            "meta": [],
-            "name": "butter",
-            "original": "1 tbsp butter",
-            "originalName": "butter",
-            "unit": "tbsp"
+export const example = {
+  id: 74529,
+  image: "https://img.spoonacular.com/recipes/74529-556x370.jpg",
+  imageType: "jpg",
+  title: "Soy-Marinated Chicken Thighs with Shiitake Mushrooms",
+  readyInMinutes: 150,
+  servings: 4,  // ?  Calcolo quantità per porzioni
+  sourceUrl:
+    "https://www.foodandwine.com/recipes/soy-marinated-chicken-thighs-shiitake-mushrooms",        // ?  Usare
+  vegetarian: false,
+  vegan: false,
+  glutenFree: true,
+  dairyFree: true,
+  veryHealthy: false,
+  cheap: false,
+  veryPopular: false,
+  sustainable: false,
+  lowFodmap: false,
+  weightWatcherSmartPoints: 9,
+  gaps: "no",
+  preparationMinutes: 25,
+  cookingMinutes: 125,
+  aggregateLikes: 0,
+  healthScore: 34.0,
+  creditsText: "Food and Wine",   // ?  Usare
+  license: null,
+  sourceName: "Food and Wine",
+  pricePerServing: 706.21,
+  extendedIngredients: [
+    {
+      id: 10211215,
+      aisle: "Produce",
+      image: "garlic.jpg",
+      consistency: "SOLID",
+      name: "garlic cloves",
+      nameClean: "garlic cloves",
+      original: "2 large garlic cloves, minced",
+      originalName: "garlic cloves, minced",
+      amount: 2.0,
+      unit: "large",
+      meta: ["minced"],
+      measures: {
+        us: {
+          amount: 2.0,
+          unitShort: "large",
+          unitLong: "larges",
         },
-        {
-            "aisle": "Produce",
-            "amount": 2.0,
-            "consistency": "solid",
-            "id": 10011135,
-            "image": "cauliflower.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 473.176,
-                    "unitLong": "milliliters",
-                    "unitShort": "ml"
-                },
-                "us": {
-                    "amount": 2.0,
-                    "unitLong": "cups",
-                    "unitShort": "cups"
-                }
-            },
-            "meta": [
-                "frozen",
-                "thawed",
-                "cut into bite-sized pieces"
-            ],
-            "name": "cauliflower florets",
-            "original": "about 2 cups frozen cauliflower florets, thawed, cut into bite-sized pieces",
-            "originalName": "about frozen cauliflower florets, thawed, cut into bite-sized pieces",
-            "unit": "cups"
+        metric: {
+          amount: 2.0,
+          unitShort: "large",
+          unitLong: "larges",
         },
-        {
-            "aisle": "Cheese",
-            "amount": 2.0,
-            "consistency": "solid",
-            "id": 1041009,
-            "image": "cheddar-cheese.png",
-            "measures": {
-                "metric": {
-                    "amount": 2.0,
-                    "unitLong": "Tbsps",
-                    "unitShort": "Tbsps"
-                },
-                "us": {
-                    "amount": 2.0,
-                    "unitLong": "Tbsps",
-                    "unitShort": "Tbsps"
-                }
-            },
-            "meta": [
-                "grated",
-                "(I used romano)"
-            ],
-            "name": "cheese",
-            "original": "2 tbsp grated cheese (I used romano)",
-            "originalName": "grated cheese (I used romano)",
-            "unit": "tbsp"
+      },
+    },
+    {
+      id: 11216,
+      aisle: "Produce",
+      image: "ginger.png",
+      consistency: "SOLID",
+      name: "ginger",
+      nameClean: "ginger",
+      original: "1 tablespoon finely grated ginger",
+      originalName: "finely grated ginger",
+      amount: 1.0,
+      unit: "tablespoon",
+      meta: ["finely grated"],
+      measures: {
+        us: {
+          amount: 1.0,
+          unitShort: "Tbsp",
+          unitLong: "Tbsp",
         },
-        {
-            "aisle": "Oil, Vinegar, Salad Dressing",
-            "amount": 1.0,
-            "consistency": "liquid",
-            "id": 1034053,
-            "image": "olive-oil.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 1.0,
-                    "unitLong": "Tbsp",
-                    "unitShort": "Tbsp"
-                },
-                "us": {
-                    "amount": 1.0,
-                    "unitLong": "Tbsp",
-                    "unitShort": "Tbsp"
-                }
-            },
-            "meta": [],
-            "name": "extra virgin olive oil",
-            "original": "1-2 tbsp extra virgin olive oil",
-            "originalName": "extra virgin olive oil",
-            "unit": "tbsp"
+        metric: {
+          amount: 1.0,
+          unitShort: "Tbsp",
+          unitLong: "Tbsp",
         },
-        {
-            "aisle": "Produce",
-            "amount": 5.0,
-            "consistency": "solid",
-            "id": 11215,
-            "image": "garlic.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 5.0,
-                    "unitLong": "cloves",
-                    "unitShort": "cloves"
-                },
-                "us": {
-                    "amount": 5.0,
-                    "unitLong": "cloves",
-                    "unitShort": "cloves"
-                }
-            },
-            "meta": [],
-            "name": "garlic",
-            "original": "5-6 cloves garlic",
-            "originalName": "garlic",
-            "unit": "cloves"
+      },
+    },
+    {
+      id: 4532,
+      aisle: "Oil, Vinegar, Salad Dressing",
+      image: "hazelnut-oil.jpg",
+      consistency: "LIQUID",
+      name: "hazelnut oil",
+      nameClean: "hazelnut oil",
+      original: "1 teaspoon walnut or hazelnut oil",
+      originalName: "walnut or hazelnut oil",
+      amount: 1.0,
+      unit: "teaspoon",
+      meta: [],
+      measures: {
+        us: {
+          amount: 1.0,
+          unitShort: "tsp",
+          unitLong: "teaspoon",
         },
-        {
-            "aisle": "Pasta and Rice",
-            "amount": 6.0,
-            "consistency": "solid",
-            "id": 20420,
-            "image": "fusilli.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 170.097,
-                    "unitLong": "grams",
-                    "unitShort": "g"
-                },
-                "us": {
-                    "amount": 6.0,
-                    "unitLong": "ounces",
-                    "unitShort": "oz"
-                }
-            },
-            "meta": [
-                "(I used linguine)"
-            ],
-            "name": "pasta",
-            "original": "6-8 ounces pasta (I used linguine)",
-            "originalName": "pasta (I used linguine)",
-            "unit": "ounces"
+        metric: {
+          amount: 1.0,
+          unitShort: "tsp",
+          unitLong: "teaspoon",
         },
-        {
-            "aisle": "Spices and Seasonings",
-            "amount": 2.0,
-            "consistency": "solid",
-            "id": 1032009,
-            "image": "red-pepper-flakes.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 2.0,
-                    "unitLong": "pinches",
-                    "unitShort": "pinches"
-                },
-                "us": {
-                    "amount": 2.0,
-                    "unitLong": "pinches",
-                    "unitShort": "pinches"
-                }
-            },
-            "meta": [
-                "red"
-            ],
-            "name": "red pepper flakes",
-            "original": "couple of pinches red pepper flakes, optional",
-            "originalName": "couple of red pepper flakes, optional",
-            "unit": "pinches"
+      },
+    },
+    {
+      id: 6168,
+      aisle: "Condiments",
+      image: "hot-sauce-or-tabasco.png",
+      consistency: "LIQUID",
+      name: "hot sauce",
+      nameClean: "hot sauce",
+      original: "2 teaspoons hot sauce",
+      originalName: "hot sauce",
+      amount: 2.0,
+      unit: "teaspoons",
+      meta: [],
+      measures: {
+        us: {
+          amount: 2.0,
+          unitShort: "tsps",
+          unitLong: "teaspoons",
         },
-        {
-            "aisle": "Spices and Seasonings",
-            "amount": 2.0,
-            "consistency": "solid",
-            "id": 1102047,
-            "image": "salt-and-pepper.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 2.0,
-                    "unitLong": "servings",
-                    "unitShort": "servings"
-                },
-                "us": {
-                    "amount": 2.0,
-                    "unitLong": "servings",
-                    "unitShort": "servings"
-                }
-            },
-            "meta": [
-                "to taste"
-            ],
-            "name": "salt and pepper",
-            "original": "salt and pepper, to taste",
-            "originalName": "salt and pepper, to taste",
-            "unit": "servings"
+        metric: {
+          amount: 2.0,
+          unitShort: "tsps",
+          unitLong: "teaspoons",
         },
-        {
-            "aisle": "Produce",
-            "amount": 3.0,
-            "consistency": "solid",
-            "id": 11291,
-            "image": "spring-onions.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 3.0,
-                    "unitLong": "",
-                    "unitShort": ""
-                },
-                "us": {
-                    "amount": 3.0,
-                    "unitLong": "",
-                    "unitShort": ""
-                }
-            },
-            "meta": [
-                "white",
-                "green",
-                "separated",
-                "chopped"
-            ],
-            "name": "scallions",
-            "original": "3 scallions, chopped, white and green parts separated",
-            "originalName": "scallions, chopped, white and green parts separated",
-            "unit": ""
+      },
+    },
+    {
+      id: 9152,
+      aisle: "Produce",
+      image: "lemon-juice.jpg",
+      consistency: "LIQUID",
+      name: "lemon juice",
+      nameClean: "lemon juice",
+      original: "2 teaspoons fresh lemon juice",
+      originalName: "fresh lemon juice",
+      amount: 2.0,
+      unit: "teaspoons",
+      meta: ["fresh"],
+      measures: {
+        us: {
+          amount: 2.0,
+          unitShort: "tsps",
+          unitLong: "teaspoons",
         },
-        {
-            "aisle": "Alcoholic Beverages",
-            "amount": 2.0,
-            "consistency": "liquid",
-            "id": 14106,
-            "image": "white-wine.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 2.0,
-                    "unitLong": "Tbsps",
-                    "unitShort": "Tbsps"
-                },
-                "us": {
-                    "amount": 2.0,
-                    "unitLong": "Tbsps",
-                    "unitShort": "Tbsps"
-                }
-            },
-            "meta": [
-                "white"
-            ],
-            "name": "white wine",
-            "original": "2-3 tbsp white wine",
-            "originalName": "white wine",
-            "unit": "tbsp"
+        metric: {
+          amount: 2.0,
+          unitShort: "tsps",
+          unitLong: "teaspoons",
         },
+      },
+    },
+    {
+      id: 16424,
+      aisle: "Condiments",
+      image: "soy-sauce.jpg",
+      consistency: "LIQUID",
+      name: "soy sauce",
+      nameClean: "soy sauce",
+      original: "1/2 cup low-sodium soy sauce",
+      originalName: "low-sodium soy sauce",
+      amount: 0.5,
+      unit: "cup",
+      meta: ["low-sodium"],
+      measures: {
+        us: {
+          amount: 0.5,
+          unitShort: "cups",
+          unitLong: "cups",
+        },
+        metric: {
+          amount: 127.5,
+          unitShort: "ml",
+          unitLong: "milliliters",
+        },
+      },
+    },
+    {
+      id: 1102047,
+      aisle: "Spices and Seasonings",
+      image: "salt-and-pepper.jpg",
+      consistency: "SOLID",
+      name: "salt and pepper",
+      nameClean: "salt and pepper",
+      original: "Salt and freshly ground pepper",
+      originalName: "Salt and freshly ground pepper",
+      amount: 4.0,
+      unit: "servings",
+      meta: ["freshly ground"],
+      measures: {
+        us: {
+          amount: 4.0,
+          unitShort: "servings",
+          unitLong: "servings",
+        },
+        metric: {
+          amount: 4.0,
+          unitShort: "servings",
+          unitLong: "servings",
+        },
+      },
+    },
+    {
+      id: 11291,
+      aisle: "Produce",
+      image: "spring-onions.jpg",
+      consistency: "SOLID",
+      name: "scallions",
+      nameClean: "scallions",
+      original: "6 large scallions, thinly sliced",
+      originalName: "scallions, thinly sliced",
+      amount: 6.0,
+      unit: "large",
+      meta: ["thinly sliced"],
+      measures: {
+        us: {
+          amount: 6.0,
+          unitShort: "large",
+          unitLong: "larges",
+        },
+        metric: {
+          amount: 6.0,
+          unitShort: "large",
+          unitLong: "larges",
+        },
+      },
+    },
+    {
+      id: 11238,
+      aisle: "Produce",
+      image: "shiitake-mushrooms.png",
+      consistency: "SOLID",
+      name: "shiitake mushrooms",
+      nameClean: "shiitake mushrooms",
+      original: "1 pound shiitake mushrooms, caps sliced 1/4 inch thick",
+      originalName: "shiitake mushrooms, caps sliced 1/4 inch thick",
+      amount: 1.0,
+      unit: "pound",
+      meta: ["sliced"],
+      measures: {
+        us: {
+          amount: 1.0,
+          unitShort: "lb",
+          unitLong: "pound",
+        },
+        metric: {
+          amount: 453.592,
+          unitShort: "g",
+          unitLong: "grams",
+        },
+      },
+    },
+    {
+      id: 5096,
+      aisle: "Meat",
+      image: "chicken-thighs.png",
+      consistency: "SOLID",
+      name: "chicken thighs",
+      nameClean: "chicken thighs",
+      original: "8 skinless chicken thighs",
+      originalName: "skinless chicken thighs",
+      amount: 8.0,
+      unit: "",
+      meta: ["skinless"],
+      measures: {
+        us: {
+          amount: 8.0,
+          unitShort: "",
+          unitLong: "",
+        },
+        metric: {
+          amount: 8.0,
+          unitShort: "",
+          unitLong: "",
+        },
+      },
+    },
+    {
+      id: 4669,
+      aisle: "Oil, Vinegar, Salad Dressing",
+      image: "vegetable-oil.jpg",
+      consistency: "LIQUID",
+      name: "vegetable oil",
+      nameClean: "vegetable oil",
+      original: "2 tablespoons vegetable oil",
+      originalName: "vegetable oil",
+      amount: 2.0,
+      unit: "tablespoons",
+      meta: [],
+      measures: {
+        us: {
+          amount: 2.0,
+          unitShort: "Tbsps",
+          unitLong: "Tbsps",
+        },
+        metric: {
+          amount: 2.0,
+          unitShort: "Tbsps",
+          unitLong: "Tbsps",
+        },
+      },
+    },
+  ],
+  summary:
+    'Soy-Marinated Chicken Thighs with Shiitake Mushrooms requires roughly <b>2 hours and 30 minutes</b> from start to finish. One serving contains <b>412 calories</b>, <b>50g of protein</b>, and <b>18g of fat</b>. This recipe serves 4 and costs $7.06 per serving. A mixture of vegetable oil, ginger, salt and pepper, and a handful of other ingredients are all it takes to make this recipe so yummy. This recipe is liked by 1 foodies and cooks. Not a lot of people really liked this main course. It is brought to you by Food and Wine. It is a good option if you\'re following a <b>gluten free and dairy free</b> diet. Overall, this recipe earns a <b>pretty good spoonacular score of 70%</b>. Try <a href="https://spoonacular.com/recipes/asian-marinated-chicken-thighs-632848">Asian Marinated Chicken Thighs</a>, <a href="https://spoonacular.com/recipes/rosemary-thyme-marinated-mushrooms-658808">Rosemary Thyme Marinated Mushrooms</a>, and <a href="https://spoonacular.com/recipes/warm-quinoa-spinach-and-shiitake-salad-664969">Warm Quinoa Spinach and Shiitake Salad</a> for similar recipes.',
+  cuisines: [],
+  dishTypes: ["lunch", "main course", "main dish", "dinner"],
+  diets: ["gluten free", "dairy free"],
+  occasions: [],
+  instructions:
+    "In a baking dish, combine the soy sauce, garlic, ginger and hot sauce. Stir in 1/2 cup of water. Add the chicken thighs and turn to coat. Cover and refrigerate for 1 hour, turning a few times.                                                         Preheat the oven to 350. Bring the chicken to room temperature. Discard half of the marinade. Bake the chicken for 40 minutes, basting a few times.                                               Meanwhile, heat the oil in a large, nonstick skillet. Add the shiitake, salt and pepper; cook over moderately high heat for 4 minutes. Add the scallions and cook over moderate heat for 5 minutes. Stir in the lemon juice and walnut oil and serve with the chicken.",
+  analyzedInstructions: [
+    {
+      name: "",
+      steps: [
         {
-            "aisle": "Pasta and Rice",
-            "amount": 0.25,
-            "consistency": "solid",
-            "id": 99025,
-            "image": "breadcrumbs.jpg",
-            "measures": {
-                "metric": {
-                    "amount": 59.147,
-                    "unitLong": "milliliters",
-                    "unitShort": "ml"
-                },
-                "us": {
-                    "amount": 0.25,
-                    "unitLong": "cups",
-                    "unitShort": "cups"
-                }
-            },
-            "meta": [
-                "whole wheat",
-                "(I used panko)"
-            ],
-            "name": "whole wheat bread crumbs",
-            "original": "1/4 cup whole wheat bread crumbs (I used panko)",
-            "originalName": "whole wheat bread crumbs (I used panko)",
-            "unit": "cup"
-        }
-    ],
-    "summary": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs might be a good recipe to expand your main course repertoire. One portion of this dish contains approximately <b>19g of protein </b>,  <b>20g of fat </b>, and a total of  <b>584 calories </b>. For  <b>$1.63 per serving </b>, this recipe  <b>covers 23% </b> of your daily requirements of vitamins and minerals. This recipe serves 2. It is brought to you by fullbellysisters.blogspot.com. 209 people were glad they tried this recipe. A mixture of scallions, salt and pepper, white wine, and a handful of other ingredients are all it takes to make this recipe so scrumptious. From preparation to the plate, this recipe takes approximately  <b>45 minutes </b>. All things considered, we decided this recipe  <b>deserves a spoonacular score of 83% </b>. This score is awesome. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/cauliflower-gratin-with-garlic-breadcrumbs-318375\">Cauliflower Gratin with Garlic Breadcrumbs</a>, < href=\"https://spoonacular.com/recipes/pasta-with-cauliflower-sausage-breadcrumbs-30437\">Pasta With Cauliflower, Sausage, & Breadcrumbs</a>, and <a href=\"https://spoonacular.com/recipes/pasta-with-roasted-cauliflower-parsley-and-breadcrumbs-30738\">Pasta With Roasted Cauliflower, Parsley, And Breadcrumbs</a>.",
-    "winePairing": {
-        "pairedWines": [
-            "chardonnay",
-            "gruener veltliner",
-            "sauvignon blanc"
-        ],
-        "pairingText": "Chardonnay, Gruener Veltliner, and Sauvignon Blanc are great choices for Pasta. Sauvignon Blanc and Gruner Veltliner both have herby notes that complement salads with enough acid to match tart vinaigrettes, while a Chardonnay can be a good pick for creamy salad dressings. The Buddha Kat Winery Chardonnay with a 4 out of 5 star rating seems like a good match. It costs about 25 dollars per bottle.",
-        "productMatches": [
+          number: 1,
+          step: "In a baking dish, combine the soy sauce, garlic, ginger and hot sauce. Stir in 1/2 cup of water.",
+          ingredients: [
             {
-                "id": 469199,
-                "title": "Buddha Kat Winery Chardonnay",
-                "description": "We barrel ferment our Chardonnay and age it in a mix of Oak and Stainless. Giving this light bodied wine modest oak character, a delicate floral aroma, and a warming finish.",
-                "price": "$25.0",
-                "imageUrl": "https://img.spoonacular.com/products/469199-312x231.jpg",
-                "averageRating": 0.8,
-                "ratingCount": 1.0,
-                "score": 0.55,
-                "link": "https://www.amazon.com/2015-Buddha-Kat-Winery-Chardonnay/dp/B00OSAVVM4?tag=spoonacular-20"
-            }
-        ]
-    }
-}
-
-
-export const fakeIngredients = {
-    "ingredients": [
-        {
-            "amount": {
-                "metric": {
-                    "unit": "g",
-                    "value": 222.0
-                },
-                "us": {
-                    "unit": "cups",
-                    "value": 1.5
-                }
+              id: 6168,
+              name: "hot sauce",
+              localizedName: "hot sauce",
+              image: "hot-sauce-or-tabasco.png",
             },
-            "image": "blueberries.jpg",
-            "name": "blueberries"
+            {
+              id: 16124,
+              name: "soy sauce",
+              localizedName: "soy sauce",
+              image: "soy-sauce.jpg",
+            },
+            {
+              id: 11215,
+              name: "garlic",
+              localizedName: "garlic",
+              image: "garlic.png",
+            },
+            {
+              id: 11216,
+              name: "ginger",
+              localizedName: "ginger",
+              image: "ginger.png",
+            },
+            {
+              id: 14412,
+              name: "water",
+              localizedName: "water",
+              image: "water.png",
+            },
+          ],
+          equipment: [
+            {
+              id: 404646,
+              name: "baking pan",
+              localizedName: "baking pan",
+              image:
+                "https://spoonacular.com/cdn/equipment_100x100/roasting-pan.jpg",
+            },
+          ],
         },
         {
-            "amount": {
-                "metric": {
-                    "unit": "",
-                    "value": 1.0
-                },
-                "us": {
-                    "unit": "",
-                    "value": 1.0
-                }
+          number: 2,
+          step: "Add the chicken thighs and turn to coat. Cover and refrigerate for 1 hour, turning a few times.",
+          ingredients: [
+            {
+              id: 5091,
+              name: "chicken thighs",
+              localizedName: "chicken thighs",
+              image: "chicken-thigh.jpg",
             },
-            "image": "egg-white.jpg",
-            "name": "egg white"
+          ],
+          equipment: [],
+          length: {
+            number: 60,
+            unit: "minutes",
+          },
         },
         {
-            "amount": {
-                "metric": {
-                    "unit": "Tbsps",
-                    "value": 2.0
-                },
-                "us": {
-                    "unit": "Tbsps",
-                    "value": 2.0
-                }
+          number: 3,
+          step: "Preheat the oven to 35",
+          ingredients: [],
+          equipment: [
+            {
+              id: 404784,
+              name: "oven",
+              localizedName: "oven",
+              image: "https://spoonacular.com/cdn/equipment_100x100/oven.jpg",
             },
-            "image": "flour.png",
-            "name": "flour"
+          ],
         },
         {
-            "amount": {
-                "metric": {
-                    "unit": "g",
-                    "value": 150.0
-                },
-                "us": {
-                    "unit": "cup",
-                    "value": 0.75
-                }
+          number: 4,
+          step: "Bring the chicken to room temperature. Discard half of the marinade.",
+          ingredients: [
+            {
+              id: 0,
+              name: "marinade",
+              localizedName: "marinade",
+              image: "seasoning.png",
             },
-            "image": "sugar-in-bowl.png",
-            "name": "granulated sugar"
+            {
+              id: 0,
+              name: "chicken",
+              localizedName: "chicken",
+              image:
+                "https://spoonacular.com/cdn/ingredients_100x100/whole-chicken.jpg",
+            },
+          ],
+          equipment: [],
         },
         {
-            "amount": {
-                "metric": {
-                    "unit": "tsp",
-                    "value": 1.0
-                },
-                "us": {
-                    "unit": "tsp",
-                    "value": 1.0
-                }
+          number: 5,
+          step: "Bake the chicken for 40 minutes, basting a few times.",
+          ingredients: [
+            {
+              id: 0,
+              name: "chicken",
+              localizedName: "chicken",
+              image:
+                "https://spoonacular.com/cdn/ingredients_100x100/whole-chicken.jpg",
             },
-            "image": "lemon-juice.jpg",
-            "name": "fresh lemon juice"
+          ],
+          equipment: [
+            {
+              id: 404784,
+              name: "oven",
+              localizedName: "oven",
+              image: "https://spoonacular.com/cdn/equipment_100x100/oven.jpg",
+            },
+          ],
+          length: {
+            number: 40,
+            unit: "minutes",
+          },
         },
         {
-            "amount": {
-                "metric": {
-                    "unit": "pinch",
-                    "value": 1.0
-                },
-                "us": {
-                    "unit": "pinch",
-                    "value": 1.0
-                }
+          number: 6,
+          step: "Meanwhile, heat the oil in a large, nonstick skillet.",
+          ingredients: [
+            {
+              id: 4582,
+              name: "cooking oil",
+              localizedName: "cooking oil",
+              image: "vegetable-oil.jpg",
             },
-            "image": "ground-nutmeg.jpg",
-            "name": "nutmeg"
+          ],
+          equipment: [
+            {
+              id: 404645,
+              name: "frying pan",
+              localizedName: "frying pan",
+              image: "https://spoonacular.com/cdn/equipment_100x100/pan.png",
+            },
+          ],
         },
         {
-            "amount": {
-                "metric": {
-                    "unit": "",
-                    "value": 2.0
-                },
-                "us": {
-                    "unit": "",
-                    "value": 2.0
-                }
+          number: 7,
+          step: "Add the shiitake, salt and pepper; cook over moderately high heat for 4 minutes.",
+          ingredients: [
+            {
+              id: 1102047,
+              name: "salt and pepper",
+              localizedName: "salt and pepper",
+              image: "salt-and-pepper.jpg",
             },
-            "image": "pie-crust.jpg",
-            "name": "pie dough round"
+          ],
+          equipment: [],
+          length: {
+            number: 4,
+            unit: "minutes",
+          },
         },
         {
-            "amount": {
-                "metric": {
-                    "unit": "Tbsps",
-                    "value": 2.0
-                },
-                "us": {
-                    "unit": "Tbsps",
-                    "value": 2.0
-                }
+          number: 8,
+          step: "Add the scallions and cook over moderate heat for 5 minutes. Stir in the lemon juice and walnut oil and serve with the chicken.",
+          ingredients: [
+            {
+              id: 9152,
+              name: "lemon juice",
+              localizedName: "lemon juice",
+              image: "lemon-juice.jpg",
             },
-            "image": "tapioca-pearls.png",
-            "name": "quick cooking tapioca"
+            {
+              id: 4528,
+              name: "walnut oil",
+              localizedName: "walnut oil",
+              image: "walnut-oil.jpg",
+            },
+            {
+              id: 11291,
+              name: "green onions",
+              localizedName: "green onions",
+              image: "spring-onions.jpg",
+            },
+            {
+              id: 0,
+              name: "chicken",
+              localizedName: "chicken",
+              image:
+                "https://spoonacular.com/cdn/ingredients_100x100/whole-chicken.jpg",
+            },
+          ],
+          equipment: [],
+          length: {
+            number: 5,
+            unit: "minutes",
+          },
         },
-        {
-            "amount": {
-                "metric": {
-                    "unit": "g",
-                    "value": 305.0
-                },
-                "us": {
-                    "unit": "cups",
-                    "value": 2.5
-                }
-            },
-            "image": "rhubarb.jpg",
-            "name": "trimmed rhubarb"
-        },
-        {
-            "amount": {
-                "metric": {
-                    "unit": "tsps",
-                    "value": 0.333
-                },
-                "us": {
-                    "unit": "tsps",
-                    "value": 0.333
-                }
-            },
-            "image": "salt.jpg",
-            "name": "salt"
-        },
-        {
-            "amount": {
-                "metric": {
-                    "unit": "Tbsps",
-                    "value": 0.5
-                },
-                "us": {
-                    "unit": "Tbsps",
-                    "value": 0.5
-                }
-            },
-            "image": "butter-sliced.jpg",
-            "name": "unsalted butter"
-        }
-    ]
-}
+      ],
+    },
+  ],
+  spoonacularScore: 70.58866119384766,
+};

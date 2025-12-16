@@ -4,26 +4,27 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import RecipeCard from "../components/RecipeCard";
+import type { IHomeRecipe } from "../types/IHome";
 
 export default function Home() {
-  const [recipesList, setRecipesList] = useState<any[]>([]);
+  const [recipesList, setRecipesList] = useState<IHomeRecipe[]>([]);
   const apiKey = import.meta.env.VITE_API_KEY;
 
-  // async function getRecipe() {
-  //   try {
-  //     const resp = await axios.get(
-  //       `https://api.spoonacular.com/recipes/complexSearch?diet=vegetarian&apiKey=${apiKey}`
-  //     );
-  //     console.log(resp.data.results)
-  //     setRecipesList(resp.data.results);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+  async function getRecipe() {
+    try {
+      const resp = await axios.get(
+        `https://api.spoonacular.com/recipes/complexSearch?number=20&diet=vegetarian&apiKey=${apiKey}`
+      );
+      console.log(resp.data.results)
+      setRecipesList(resp.data.results);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-  // useEffect(() => {
-  //   getRecipe();
-  // }, []);
+  useEffect(() => {
+    getRecipe();
+  }, []);
 
   return (
     <div className="px-4">
@@ -46,15 +47,11 @@ export default function Home() {
             id={recipe.id}
           />
         ))}
-        <RecipeCard
-            key={'ok'}
-            title={'Titolo di esempio'}
-            image={"/src/assets/images/piatto-vegetariano-2.jpg"}
-            id={'12345'}
-          />
       </div>
       {/* Spacer */}
       <div className="h-20"></div> 
     </div>
+
+    
   );
 }

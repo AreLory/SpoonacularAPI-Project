@@ -10,7 +10,7 @@ export default function Hero({backgroundImage, beforeTitle, title1, title2, subt
             />
         </div>
         <div className="col-start-3 row-span-4 flex items-center justify-center ">
-            <Banner beforeTitle={beforeTitle} title1={title1} title2={title2} subtitle={subtitle}/>
+            
         </div>
       </div>
     </div>
