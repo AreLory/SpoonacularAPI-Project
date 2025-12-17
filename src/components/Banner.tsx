@@ -1,16 +1,12 @@
+import type { IBannerProps } from "../types/IBannerProps";
+
 export default function Banner({
   image,
   title,
   preparationMinutes,
   cookingMinutes,
   readyInMinutes,
-}: {
-  image: string;
-  title: string;
-  preparationMinutes: number;
-  cookingMinutes: number;
-  readyInMinutes: number;
-}) {
+}: IBannerProps) {
   return (
     <div className="mt-[100px]">
       <div className="relative flex flex-col items-center rounded-xl bg-secondary pt-[200px]">
@@ -28,8 +24,6 @@ export default function Banner({
             />
           </div>
         </div>
-
-        {/* CONTENUTO */}
         <div className="flex flex-col items-center justify-center w-full">
           <h2 className="text-quaternary text-xl md:text-4xl font-bold p-4">
             {title}

@@ -17,25 +17,26 @@ import type { IRecipe } from "../types/IRecipe";
 import { example } from "../fakeRecipe";
 
 export default function Recipe() {
-  // const params = useParams();
-  // const { id } = params;
+  const params = useParams();
+  const { id } = params;
 
-  // const [recipe, setRecipe] = useState<IRecipe | null>(null);
-  // const apiKey = import.meta.env.VITE_API_KEY2;
+  const [query, setQuery] = useState('')
+  const [recipe, setRecipe] = useState<IRecipe | null>(null);
+  const apiKey = import.meta.env.VITE_API_KEY2;
 
-  // useEffect(() => {
-  //   async function fetchRecipeDetails(recipeId: string | undefined) {
-  //     const resp = await axios.get(
-  //       `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`
-  //     );
-  //     setRecipe(resp.data);
-  //   }
-  //   fetchRecipeDetails(id);
-  // }, [id]);
+  useEffect(() => {
+    async function fetchRecipeDetails(recipeId: string | undefined) {
+      const resp = await axios.get(
+        `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`
+      );
+      setRecipe(resp.data);
+    }
+    fetchRecipeDetails(id);
+  }, [id]);
 
-  // if (!recipe) {
-  //   return <Loader/>;
-  // }
+  if (!recipe) {
+    return <Loader/>;
+  }
 
   const {
     title,
@@ -47,13 +48,13 @@ export default function Recipe() {
     analyzedInstructions,
     extendedIngredients,
     summary,
-  }: IRecipe = example;
+  }: IRecipe = recipe;
 
   const stripHtml = (html: any) => html.replace(/<[^>]*>/g, "");
 
   return (
     <>
-      <Navbar />
+      <Navbar value={query} onChange={setQuery} />
       <div className="text-amber-50 flex flex-col items-center justify-center px-6">
         {/* Sezione ricetta */}
 
@@ -97,7 +98,7 @@ export default function Recipe() {
         <p className="text-2xl text-mywhite w-full text-center mt-4">
           Other recipes
         </p>
-        {/* <RecipesContainer /> */}
+        <RecipesContainer query={query}/>
       </div>
     </>
   );

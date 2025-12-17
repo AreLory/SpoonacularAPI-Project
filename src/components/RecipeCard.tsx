@@ -1,5 +1,7 @@
 import { Link } from "react-router";
+
 import type { IHomeRecipe } from "../types/IHome";
+
 const RecipeCard = ({ image, title, id }: IHomeRecipe) => {
   return (
     <div className="max-w-sm mx-auto p-4 flex flex-col items-center justify-center">

@@ -1,5 +1,3 @@
-import Banner from "./Banner";
-
 export default function Hero({
   backgroundImage,
 }: {

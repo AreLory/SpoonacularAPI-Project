@@ -3,7 +3,11 @@ import { IoIosMenu } from "react-icons/io";
 
 import Input from "./Input";
 
-export default function Navbar() {
+import type { IInput } from "../types/IInput";
+
+export default function Navbar({value, onChange}:IInput) {
+
+
   return (
     <nav className="w-full flex sticky top-0 h-[70px] bg-primary z-50 items-center justify-between">
       {/* Left */}
@@ -20,7 +24,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <Input />
+        <Input onChange={onChange} value={value}/>
       </div>
 
       {/* Right */}
