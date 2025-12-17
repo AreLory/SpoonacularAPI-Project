@@ -136,9 +136,9 @@ export const example = {
   sourceUrl:
     "https://www.foodandwine.com/recipes/soy-marinated-chicken-thighs-shiitake-mushrooms",        // ?  Usare
   vegetarian: false,
-  vegan: false,
-  glutenFree: true,
-  dairyFree: true,
+  vegan: false,         // ?! Yess
+  glutenFree: true,        // ?! Yess
+  dairyFree: true,      // ?! Yess
   veryHealthy: false,
   cheap: false,
   veryPopular: false,
@@ -435,7 +435,7 @@ export const example = {
     'Soy-Marinated Chicken Thighs with Shiitake Mushrooms requires roughly <b>2 hours and 30 minutes</b> from start to finish. One serving contains <b>412 calories</b>, <b>50g of protein</b>, and <b>18g of fat</b>. This recipe serves 4 and costs $7.06 per serving. A mixture of vegetable oil, ginger, salt and pepper, and a handful of other ingredients are all it takes to make this recipe so yummy. This recipe is liked by 1 foodies and cooks. Not a lot of people really liked this main course. It is brought to you by Food and Wine. It is a good option if you\'re following a <b>gluten free and dairy free</b> diet. Overall, this recipe earns a <b>pretty good spoonacular score of 70%</b>. Try <a href="https://spoonacular.com/recipes/asian-marinated-chicken-thighs-632848">Asian Marinated Chicken Thighs</a>, <a href="https://spoonacular.com/recipes/rosemary-thyme-marinated-mushrooms-658808">Rosemary Thyme Marinated Mushrooms</a>, and <a href="https://spoonacular.com/recipes/warm-quinoa-spinach-and-shiitake-salad-664969">Warm Quinoa Spinach and Shiitake Salad</a> for similar recipes.',
   cuisines: [],
   dishTypes: ["lunch", "main course", "main dish", "dinner"],
-  diets: ["gluten free", "dairy free"],
+  diets: ["gluten free", "dairy free"],           // ?! Yess
   occasions: [],
   instructions:
     "In a baking dish, combine the soy sauce, garlic, ginger and hot sauce. Stir in 1/2 cup of water. Add the chicken thighs and turn to coat. Cover and refrigerate for 1 hour, turning a few times.                                                         Preheat the oven to 350. Bring the chicken to room temperature. Discard half of the marinade. Bake the chicken for 40 minutes, basting a few times.                                               Meanwhile, heat the oil in a large, nonstick skillet. Add the shiitake, salt and pepper; cook over moderately high heat for 4 minutes. Add the scallions and cook over moderate heat for 5 minutes. Stir in the lemon juice and walnut oil and serve with the chicken.",

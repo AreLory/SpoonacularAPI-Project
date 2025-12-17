@@ -14,28 +14,26 @@ import Loader from "../components/Loader";
 // ** Interfaces
 import type { IRecipe } from "../types/IRecipe";
 
-import { example } from "../fakeRecipe";
-
 export default function Recipe() {
   const params = useParams();
   const { id } = params;
 
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState("");
   const [recipe, setRecipe] = useState<IRecipe | null>(null);
-  const apiKey = import.meta.env.VITE_API_KEY2;
+  const apiKey = import.meta.env.VITE_API_KEY;
+  async function fetchRecipeDetails(recipeId: string | undefined) {
+    const resp = await axios.get(
+      `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`
+    );
+    setRecipe(resp.data);
+  }
 
   useEffect(() => {
-    async function fetchRecipeDetails(recipeId: string | undefined) {
-      const resp = await axios.get(
-        `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`
-      );
-      setRecipe(resp.data);
-    }
     fetchRecipeDetails(id);
   }, [id]);
 
   if (!recipe) {
-    return <Loader/>;
+    return <Loader />;
   }
 
   const {
@@ -98,7 +96,7 @@ export default function Recipe() {
         <p className="text-2xl text-mywhite w-full text-center mt-4">
           Other recipes
         </p>
-        <RecipesContainer query={query}/>
+        <RecipesContainer query={query} />
       </div>
     </>
   );

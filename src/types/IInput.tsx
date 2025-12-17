@@ -1,4 +1,4 @@
 export interface IInput{
-    value: string,
+    query: string,
     onChange: (value:string) => void
 }

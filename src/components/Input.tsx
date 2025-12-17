@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
 import type { IInput } from "../types/IInput";
 
-const Input = ({value, onChange}:IInput) => {
+const Input = ({query, onChange}:IInput) => {
   return (
     <StyledWrapper>
       <div className="input-group">
         <input
-        value={value}
+        value={query}
         onChange={(e)=>onChange(e.target.value)}
           required
           type="text"

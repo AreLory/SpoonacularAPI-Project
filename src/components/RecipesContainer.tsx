@@ -3,19 +3,26 @@ import { useEffect, useRef, useState } from "react";
 
 // ** Interfeces
 import type { IHomeRecipe } from "../types/IHome";
-
+import type { IRecipesContainerProps } from "../types/IFilters";
 // ** Components
 import RecipeCard from "./RecipeCard";
 import Loader from "./Loader";
+// ** Function
+import { buildQueryParams } from "../api/buildQueryParams";
 
-export default function RecipesContainer({query}:{query:string}) {
+export default function RecipesContainer({
+  query,
+  filters,
+}: IRecipesContainerProps) {
   const [recipesList, setRecipesList] = useState<IHomeRecipe[]>();
-  const apiKey = import.meta.env.VITE_API_KEY2;
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   async function getRecipe() {
     try {
+      const queryParams = buildQueryParams(query, filters);
       const resp = await axios.get(
-        `https://api.spoonacular.com/recipes/complexSearch?number=20&diet=vegetarian&query=${query}&apiKey=${apiKey}`
+        `https://api.spoonacular.com/recipes/complexSearch?number=20&diet=vegetarian&${queryParams}&apiKey=${apiKey}`
       );
       setRecipesList(resp.data.results);
     } catch (error) {
@@ -24,27 +31,31 @@ export default function RecipesContainer({query}:{query:string}) {
   }
 
   useEffect(() => {
-  const timeout = setTimeout(() => {
-    if (query.trim() !== "") {
-      getRecipe().then
+    getRecipe();
+  }, []);
+
+  useEffect(() => {
+    if (!query.trim()) return;
+
+    const timeout = setTimeout(() => {
+      getRecipe();
       scrollRef.current?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      })
-    }
-  }, 500);
+        behavior: "smooth",
+      });
+    }, 500);
 
-  return () => clearTimeout(timeout);
-}, [query]);
-
-const scrollRef = useRef<HTMLDivElement>(null)
+    return () => clearTimeout(timeout);
+  }, [query, filters]);
 
   if (!recipesList) {
-    return <Loader/>;
+    return <Loader />;
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 justify-items-center mt-10 w-full max-w-[1280px]"ref={scrollRef}>
+    <div
+      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 justify-items-center mt-10 w-full max-w-7xl"
+      ref={scrollRef}
+    >
       {recipesList.map((recipe: any) => (
         <RecipeCard
           key={recipe.id}

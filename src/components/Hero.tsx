@@ -6,7 +6,7 @@ export default function Hero({
   return (
     <div className="flex w-full justify-center px-4">
       <div
-        className="flex flex-col md:flex-row border-x-2 border-quaternary w-full max-w-[1280px] rounded-xl p-4 md:p-8 gap-6">
+        className="flex flex-col md:flex-row border-x-2 border-quaternary w-full max-w-7xl rounded-xl p-4 md:p-8 gap-6">
         <div className="flex flex-col justify-center text-center md:text-left md:mr-14 md:ml-14">
           <h3
             className=" text-quaternary text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight">
