@@ -5,11 +5,6 @@ import Recipe from "./pages/Recipe";
 import NotFound from "./pages/NotFound";
 
 function App() {
-  //todo: Finish Routes 
-  //todo: Loader Gif
-  //todo: Login Page
-  //todo: Sidebar w queries parameter 
-  
 
   return (
     <>
