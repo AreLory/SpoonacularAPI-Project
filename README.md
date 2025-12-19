@@ -12,7 +12,7 @@ A modern and responsive web app for discovering and cooking delicious vegetarian
 - ⚡ **Performance**: Quick build with Vite and HMR during development
 - 🔗 **API Integration**: Integrated with Spoonacular API for complete recipe database
 
-## 🗂️ Struttura del Progetto
+## 🗂️ Project structure
 
 ```
 src/
