@@ -45,13 +45,13 @@ src/
 ```
 Home/Recipe Pages
     ↓
-Navbar (gestione query e filtri)
+Navbar (query and filters managment)
     ↓
 RecipesContainer (fetch API)
     ↓
-RecipeCard (visualizzazione singola ricetta)
+RecipeCard
     ↓
-Recipe Page (dettagli completi)
+Recipe Page (recipe datails)
 ```
 
 ## 🛠️ Packages Used
@@ -71,7 +71,7 @@ Recipe Page (dettagli completi)
 
 1. **Clone repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/AreLory/SpoonacularAPI-Project.git
 cd SpoonacularAPI
 ```
 
