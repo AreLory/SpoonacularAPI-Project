@@ -4,23 +4,23 @@ import type { IHomeRecipe } from "../types/IHome";
 
 const RecipeCard = ({ image, title, id }: IHomeRecipe) => {
   return (
-    <div className="max-w-sm mx-auto p-4 flex flex-col items-center justify-center">
+    <div className="w-full max-w-xs px-2 sm:px-1 py-2">
       <div
         className="
-    bg-secondary rounded-lg shadow-lg overflow-hidden w-[250px] 
-    group
+    bg-secondary rounded-lg shadow-lg overflow-hidden w-full 
+    group hover:shadow-xl transition-shadow duration-300
   "
       >
-        <div className="h-48">
+        <div className="h-40 sm:h-48 w-full overflow-hidden">
           <img
             src={image}
             alt="Recipe"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </div>
-        <div className="relative h-[120px] p-4 overflow-hidden">
+        <div className="relative h-24 sm:h-[120px] p-3 sm:p-4 overflow-hidden">
           <div
-            className="p-4
+            className="p-2 sm:p-4
           absolute inset-0
           flex items-center justify-center text-center
           transition-all duration-300
@@ -28,7 +28,7 @@ const RecipeCard = ({ image, title, id }: IHomeRecipe) => {
           group-hover:opacity-0
         "
           >
-            <h3 className="text-xl font-semibold text-quaternary">{title}</h3>
+            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-quaternary line-clamp-3">{title}</h3>
           </div>
           <div
             className="
@@ -42,11 +42,11 @@ const RecipeCard = ({ image, title, id }: IHomeRecipe) => {
           >
             <Link
               className="
-            bg-tiertiary rounded-lg w-28 h-10
+            bg-tiertiary rounded-lg px-4 sm:px-6 py-2
             flex items-center justify-center
-            text-white font-bold
+            text-white font-semibold text-sm
             hover:border-2 hover:border-quaternary
-            hover:text-quaternary
+            hover:text-quaternary transition-all
           "
               to={`/recipe/${id}`}
             >

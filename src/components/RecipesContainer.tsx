@@ -15,12 +15,13 @@ export default function RecipesContainer({
   filters,
 }: IRecipesContainerProps) {
   const [recipesList, setRecipesList] = useState<IHomeRecipe[]>();
-  const apiKey = import.meta.env.VITE_API_KEY;
+  const apiKey = import.meta.env.VITE_API_KEY2;
   const scrollRef = useRef<HTMLDivElement>(null);
 
   async function getRecipe() {
     try {
       const queryParams = buildQueryParams(query, filters);
+      console.log(queryParams)
       const resp = await axios.get(
         `https://api.spoonacular.com/recipes/complexSearch?number=20&diet=vegetarian&${queryParams}&apiKey=${apiKey}`
       );

@@ -1,4 +1,6 @@
 export interface IInput{
-    query: string,
-    onChange: (value:string) => void
+    placeholder?:string
+    value: string,
+    onChange: (value: string) =>void
+    bgColor?: string
 }

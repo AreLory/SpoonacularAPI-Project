@@ -13,14 +13,29 @@ import Loader from "../components/Loader";
 
 // ** Interfaces
 import type { IRecipe } from "../types/IRecipe";
+import type { IFilters } from "../types/IFilters";
 
 export default function Recipe() {
   const params = useParams();
   const { id } = params;
 
   const [query, setQuery] = useState("");
+  const [filters, setFilters ]= useState<IFilters>({})
+    
+    const updateFilters = <K extends keyof IFilters>(
+      key: K,
+      value: IFilters[K]
+    ) => {
+      setFilters((prev:any) => ({
+        ...prev,
+        [key]: value,
+      }));
+    };
+
+
+
   const [recipe, setRecipe] = useState<IRecipe | null>(null);
-  const apiKey = import.meta.env.VITE_API_KEY;
+  const apiKey = import.meta.env.VITE_API_KEY2;
   async function fetchRecipeDetails(recipeId: string | undefined) {
     const resp = await axios.get(
       `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`
@@ -52,12 +67,12 @@ export default function Recipe() {
 
   return (
     <>
-      <Navbar value={query} onChange={setQuery} />
-      <div className="text-amber-50 flex flex-col items-center justify-center px-6">
+      <Navbar query={query} onInputChange={setQuery} filters={filters} onFilterChange={updateFilters} />
+      <div className="text-amber-50 flex flex-col items-center justify-center px-3 sm:px-4 md:px-6">
         {/* Sezione ricetta */}
 
-        <div className=" flex justify-start md:justify-end flex-col md:flex-row h-fit mt-3 md:mt-12">
-          <div className="bg-tiertiary w-full h-fit flex flex-col justify-center pr-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8 h-fit mt-3 md:mt-8 w-full max-w-7xl">
+          <div className="bg-tiertiary w-full h-fit flex flex-col justify-center md:pr-4 lg:pr-8 rounded-lg md:rounded-xl overflow-hidden">
             <Banner
               key={""}
               image={image}
@@ -66,11 +81,11 @@ export default function Recipe() {
               preparationMinutes={preparationMinutes}
               title={title}
             />
-            <div className="flex flex-col bg-primary w-full h-fit p-4 mt-2 rounded-lg">
-              <h6 className="w-full text-center text-xl font-extrabold">
+            <div className="flex flex-col bg-primary w-full h-fit p-3 sm:p-4 md:p-6 mt-2 rounded-lg">
+              <h6 className="w-full text-center text-lg sm:text-xl font-extrabold mb-3">
                 SUMMARY
               </h6>
-              <div
+              <div className="text-sm sm:text-base leading-relaxed"
                 dangerouslySetInnerHTML={{
                   __html: DOMPuirfy.sanitize(stripHtml(summary)),
                 }}
@@ -93,10 +108,10 @@ export default function Recipe() {
             ingredients={extendedIngredients}
           />
         </div>
-        <p className="text-2xl text-mywhite w-full text-center mt-4">
+        <p className="text-xl sm:text-2xl text-mywhite w-full text-center mt-6 md:mt-8 font-semibold">
           Other recipes
         </p>
-        <RecipesContainer query={query} />
+        <RecipesContainer query={query} filters={filters} />
       </div>
     </>
   );
