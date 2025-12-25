@@ -1,5 +1,6 @@
 # 🥗 Veggie Vibes - Vegetarian Recipes
 [Veggie Vibes](https://arelory.github.io/SpoonacularAPI-Project/)
+
 A modern and responsive web app for discovering and cooking delicious vegetarian recipes. Powered by React, TypeScript, and Tailwind CSS.
 
 ## ✨ Features
