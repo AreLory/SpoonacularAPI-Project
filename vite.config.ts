@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/SpoonacularAPI-Project/",
   plugins: [react(),
   tailwindcss()
   ],
