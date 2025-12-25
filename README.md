@@ -1,18 +1,60 @@
-# 🥗 Veggie Vibes - Ricette Vegetariane
+# 🥗 Veggie Vibes - Vegetarian Recipes
 
-Un'applicazione web moderna e responsiva per scoprire e cucinare deliziose ricette vegetariane. Powered by React, TypeScript e Tailwind CSS.
+A modern and responsive web app for discovering and cooking delicious vegetarian recipes. Powered by React, TypeScript, and Tailwind CSS.
 
-## ✨ Caratteristiche
+## ✨ Features
 
-- 🔍 **Ricerca Avanzata**: Trova ricette per ingredienti, dieta e preferenze
-- 🎨 **Design Responsivo**: Interfaccia ottimizzata per dispositivi mobile, tablet e desktop
-- 🌱 **Filtri Intelligenti**: Filtra per diete vegane, senza glutine, senza latticini
-- ⏱️ **Tempo di Preparazione**: Visualizza tempo di preparazione, cottura e totale
-- 📝 **Ricette Dettagliate**: Ingredienti precisi e istruzioni passo dopo passo
-- ⚡ **Performance**: Build veloce con Vite e HMR durante lo sviluppo
-- 🔗 **API Integration**: Integrato con Spoonacular API per database ricette completo
+- 🔍 **Advanced Search**: Find recipes by ingredients, diet, and preferences
+- 🎨 **Responsive Design**: Interface optimized for mobile, tablet and desktop devices
+- 🌱 **Filter**: Filter by vegan, gluten-free, dairy-free diets
+- ⏱️ **Preparation Time**: View preparation, cooking and total time
+- 📝 **Detailed Recipes**: Precise ingredients and step-by-step instructions
+- ⚡ **Performance**: Quick build with Vite and HMR during development
+- 🔗 **API Integration**: Integrated with Spoonacular API for complete recipe database
 
-## 🛠️ Stack Tecnologico
+## 🗂️ Project structure
+
+```
+src/
+├── components/          
+│   ├── Banner.tsx      
+│   ├── Hero.tsx        
+│   ├── Navbar.tsx      
+│   ├── RecipeCard.tsx  
+│   ├── RecipesContainer.tsx  
+│   ├── SideBar.tsx     
+│   ├── IngredientsList.tsx   
+│   ├── StepsList.tsx   
+│   ├── Input.tsx       
+│   ├── Loader.tsx      
+│   ├── Switch.tsx      
+│   └── Section.tsx     
+├── pages/              
+│   ├── Home.tsx       
+│   ├── Recipe.tsx     
+│   └── NotFound.tsx   
+├── context/           
+├── types/             
+├── assets/            
+├── api/               
+├── index.css          
+├── App.tsx            
+└── main.tsx           
+```
+## 🔄 Data flow
+```
+Home/Recipe Pages
+    ↓
+Navbar (query and filters managment)
+    ↓
+RecipesContainer (fetch API)
+    ↓
+RecipeCard
+    ↓
+Recipe Page (recipe datails)
+```
+
+## 🛠️ Packages Used
 
 - **Frontend Framework**: React 19.2.0
 - **Linguaggio**: TypeScript 5.9.3
@@ -22,203 +64,59 @@ Un'applicazione web moderna e responsiva per scoprire e cucinare deliziose ricet
 - **Routing**: React Router 7.9.6
 - **HTTP Client**: Axios 1.13.2
 - **Icons**: React Icons 5.5.0
-- **Animazioni**: Anime.js 4.2.2
-- **Sanitizzazione HTML**: DOMPurify 3.3.1
+- **Animation**: Anime.js 4.2.2
+- **Sanitization HTML**: DOMPurify 3.3.1
 
-## 📋 Prerequisiti
+##  Installation and Setup
 
-- Node.js >= 16.0.0
-- npm o yarn
-
-## 🚀 Installazione e Setup
-
-1. **Clona il repository**
+1. **Clone repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/AreLory/SpoonacularAPI-Project.git
 cd SpoonacularAPI
 ```
 
-2. **Installa le dipendenze**
+2. **Install Dependencies**
 ```bash
 npm install
 ```
 
-3. **Configura le variabili d'ambiente**
-Crea un file `.env.local` nella root del progetto:
+3. **Configure environment variables**
+Configure environment variables Create a .env.local file in the project root:
 ```env
-VITE_API_KEY2=your_spoonacular_api_key
+VITE_API_KEY=your_spoonacular_api_key
 ```
 
-4. **Avvia il server di sviluppo**
+4. **Start development server**
 ```bash
 npm run dev
 ```
 
-L'applicazione sarà disponibile su `http://localhost:5173`
+Go to `http://localhost:5173`
 
-## 📦 Script Disponibili
 
-```bash
-# Avvia il server di sviluppo
-npm run dev
 
-# Build per la produzione
-npm run build
-
-# Verifica con ESLint
-npm run lint
-
-# Anteprima della build di produzione
-npm run preview
-```
-
-## 🗂️ Struttura del Progetto
-
-```
-src/
-├── components/          # Componenti React riutilizzabili
-│   ├── Banner.tsx      # Sezione informazioni ricetta
-│   ├── Hero.tsx        # Sezione hero page
-│   ├── Navbar.tsx      # Barra di navigazione responsive
-│   ├── RecipeCard.tsx  # Card ricetta con hover effect
-│   ├── RecipesContainer.tsx  # Grid ricette
-│   ├── SideBar.tsx     # Menu filtri mobile
-│   ├── IngredientsList.tsx   # Lista ingredienti
-│   ├── StepsList.tsx   # Istruzioni ricetta
-│   ├── Input.tsx       # Input search
-│   ├── Loader.tsx      # Loading spinner
-│   ├── Switch.tsx      # Toggle switch
-│   └── Section.tsx     # Componente sezione
-├── pages/              # Pagine dell'applicazione
-│   ├── Home.tsx       # Home page
-│   ├── Recipe.tsx     # Dettagli ricetta
-│   └── NotFound.tsx   # Pagina 404
-├── context/           # Context API (per future implementazioni)
-├── types/             # Interfacce TypeScript
-├── assets/            # Immagini e risorse statiche
-├── api/               # Utility API
-├── index.css          # Stili globali
-├── App.tsx            # Componente principale
-└── main.tsx           # Entry point
-```
-
-## 📱 Responsive Design
-
-L'applicazione è completamente responsiva con breakpoint Tailwind:
-
-- **Mobile**: <640px (sm)
-- **Tablet**: ≥640px (sm) - ≥768px (md)
-- **Desktop**: ≥1024px (lg) - ≥1280px (xl)
-
-Tutte le componenti si adattano fluidamente ai diversi schermi.
-
-## 🎯 Funzionalità Principali
+## 🎯Main Features
 
 ### 1. Home Page
-- Hero section con call-to-action
-- Barra di ricerca persistente
-- Griglia ricette responsiva
-- Filtri avanzati sidebar
+- Hero section with call-to-action
+- Persistent search bar
+- Responsive recipe grid
+- Advanced sidebar filters
+### 2. Search and filter
+- Search by recipe name
+- Filters by diet (Vegan, Gluten-free, Dairy-free)
+- Filters by international cuisine
+- Filters by included/excluded ingredients
+- Maximum preparation time
 
-### 2. Ricerca e Filtri
-- Ricerca per nome ricetta
-- Filtri per dieta (Vegan, Gluten-free, Dairy-free)
-- Filtri per cucina internazionale
-- Filtri per ingredienti inclusi/esclusi
-- Tempo massimo di preparazione
+### 3. Recipes Details
+- Recipe image with elegant frame
+- Cooking timing information
+- Recipe summary
+- List of ingredients with quantities
+- Step-by-step instructions
+- Related recipes
 
-### 3. Dettagli Ricetta
-- Immagine ricetta con cornice elegante
-- Informazioni timing cottura
-- Riassunto ricetta
-- Lista ingredienti con quantità
-- Istruzioni passo dopo passo
-- Ricette correlate
+## 🙏 Thanks
 
-## 🎨 Design System
-
-### Palette Colori
-- **Primary**: #101517 (Nero profondo)
-- **Secondary**: #151922 (Grigio scuro)
-- **Tertiary**: #1F2934 (Blu scuro)
-- **Quaternary**: #cafc05 (Verde lime)
-- **White**: #fbfbfa (Bianco caldo)
-
-### Tipografia
-- Font principale: Roboto
-- Effetti hover custom con border e shadow
-
-## 🔄 Flusso Dati
-
-```
-Home/Recipe Pages
-    ↓
-Navbar (gestione query e filtri)
-    ↓
-RecipesContainer (fetch API)
-    ↓
-RecipeCard (visualizzazione singola ricetta)
-    ↓
-Recipe Page (dettagli completi)
-```
-
-## 🚀 Deployment
-
-Per deployare l'applicazione in produzione:
-
-1. Build la applicazione:
-```bash
-npm run build
-```
-
-2. Carica la cartella `dist/` sul tuo hosting
-
-3. Assicurati che il server sia configurato per il routing client-side
-
-## 🤝 Contributi
-
-I contributi sono benvenuti! Per favore:
-
-1. Fork il repository
-2. Crea un branch per la tua feature (`git checkout -b feature/amazing-feature`)
-3. Commit i tuoi cambiamenti (`git commit -m 'Add amazing feature'`)
-4. Push al branch (`git push origin feature/amazing-feature`)
-5. Apri una Pull Request
-
-## 📝 Licenza
-
-Questo progetto è disponibile sotto la licenza MIT.
-
-## 📞 Support
-
-Per domande o segnalazioni di bug, apri un issue nel repository.
-
-## 🙏 Ringraziamenti
-
-- [Spoonacular API](https://spoonacular.com/food-api) - API ricette
-- [React Documentation](https://react.dev)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Vite](https://vitejs.dev)
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- [Spoonacular API](https://spoonacular.com/food-api) 

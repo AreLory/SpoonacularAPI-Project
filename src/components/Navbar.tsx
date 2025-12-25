@@ -45,15 +45,12 @@ export default function Navbar({
 
   return (
     <nav className="w-full flex sticky top-0 md:h-[70px] bg-primary z-50 items-center justify-between flex-row md:flex-nowrap px-2 sm:px-4 gap-2 md:gap-0">
-      {/* Left - Logo */}
       <a className="w-32 sm:w-40 md:w-[25vw] relative md:top-2"
       href="/">
         <img className="w-full h-auto"
         src={logo} 
         alt="veggie-vibes-logo" />
       </a>
-
-      {/* Center - Search (flex-grow on mobile to fill space) */}
       <div className="flex-1 md:flex-initial md:w-[50vw] flex justify-center px-1 sm:px-2">
         <Input onChange={onInputChange} 
         value={query} 

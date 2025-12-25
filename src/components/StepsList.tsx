@@ -2,7 +2,7 @@ import Step from "./Step";
 
 import type { IInstruction } from "../types/IRecipe";
 
-export default function StepsList({name, steps}:IInstruction ) {
+export default function StepsList({ steps}:IInstruction ) {
 
   if (!steps) {
     return <div className="text-xl sm:text-2xl md:text-3xl text-black">Loading...</div>;
