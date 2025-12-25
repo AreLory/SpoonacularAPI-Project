@@ -1,4 +1,4 @@
-import { Route, BrowserRouter, Routes } from "react-router";
+import { Route, HashRouter, Routes } from "react-router";
 // Pages
 import Home from "./pages/Home";
 import Recipe from "./pages/Recipe";
@@ -8,13 +8,13 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/recipe/:id" element={<Recipe/>} />
       <Route path="*" element={<NotFound/>} />
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </>
   );
 }
